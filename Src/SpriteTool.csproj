@@ -18,6 +18,7 @@
 	  <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackAsTool>true</PackAsTool>
     <ToolCommandName>dotnet-sprite</ToolCommandName>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
   <ItemGroup>
     <None Include="..\Src\assets\icon.png">
