@@ -1,10 +1,10 @@
-# css-sprite
+# dotnet-sprite
 
 A utility designed to produce a CSS sprite from a folder of images. An image sprite consolidates multiple images into a single file. Websites containing numerous images may experience prolonged loading times and trigger numerous server requests. Utilizing image sprites minimizes server requests, conserving bandwidth. This tool facilitates the creation of a sprite image along with its corresponding CSS file.
 
 Learn more about [Implementing image sprites in CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Images/Implementing_image_sprites_in_CSS)
 
-[![Build Status][ci-badge]][ci] [![NuGet][nuget-badge] ![NuGet Downloads][nuget-download-badge]][nuget]
+[![Build Status][ci-badge]][ci] ![NuGet][nuget-badge] ![NuGet Downloads][nuget-download-badge]
 
 [ci]: https://github.com/anuraj/dotnet-sprite/actions/workflows/main.yml/badge.svg
 [ci-badge]: https://github.com/anuraj/dotnet-sprite/actions/workflows/main.yml/badge.svg
