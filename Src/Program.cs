@@ -21,7 +21,7 @@ var rootCommand = new RootCommand("A tool to generate a CSS sprite from a direct
 {
     outputOption, useClssesOption
 };
-rootCommand.Name = "css-sprite";
+rootCommand.Name = "dotnet-sprite";
 
 var sourceArgument = new Argument<string>("source")
 {
