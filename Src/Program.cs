@@ -2,14 +2,14 @@
 using SkiaSharp;
 
 var outputOption = new Option<string>(
-    aliases: ["-o", "--output"],
+    aliases: new[] { "-o", "--output" },
     description: "Output directory")
 {
     IsRequired = false
 };
 
 var useClssesOption = new Option<bool>(
-    aliases: ["-c", "--use-classes"],
+    aliases: new[] { "-c", "--use-classes" },
     description: "Use classes instead of ids in the CSS file")
 {
     IsRequired = false
@@ -21,13 +21,15 @@ var rootCommand = new RootCommand("A tool to generate a CSS sprite from a direct
 {
     outputOption, useClssesOption
 };
-rootCommand.Name = "dotnet-sprite";
+rootCommand.Name = "css-sprite";
 
 var sourceArgument = new Argument<string>("source")
 {
     Arity = ArgumentArity.ExactlyOne,
     Description = "Source images directory"
 };
+
+var supportedFormats = new[] { ".png", ".jpg", ".jpeg", ".gif" };
 
 sourceArgument.SetDefaultValue(Directory.GetCurrentDirectory());
 rootCommand.Add(sourceArgument);
@@ -58,7 +60,7 @@ rootCommand.SetHandler((source, output, useClasses) =>
         }
 
         var files = Directory.GetFiles(source, "*.*", SearchOption.AllDirectories)
-            .Where(file => file.EndsWith(".png") || file.EndsWith(".jpg") || file.EndsWith(".jpeg"));
+            .Where(file => supportedFormats.Contains(Path.GetExtension(file).ToLowerInvariant()));
 
         if (!files.Any())
         {
@@ -102,7 +104,7 @@ rootCommand.SetHandler((source, output, useClasses) =>
 
             using var stream = new FileStream(Path.Combine(output!, "SpriteImage.png"), FileMode.Create);
             finalImage.Encode(SKEncodedImageFormat.Png, 100).SaveTo(stream);
-            var cssFile = Path.Combine(output, "style.css");
+            var cssFile = Path.Combine(output, "SpriteStyle.css");
             using var streamWriter = new StreamWriter(cssFile, false);
             foreach (var style in styles)
             {
@@ -121,7 +123,5 @@ rootCommand.SetHandler((source, output, useClasses) =>
         Console.ResetColor();
     }
 }, sourceArgument, outputOption, useClssesOption);
-
-rootCommand.Name = "dotnet-sprite";
 
 return rootCommand.Invoke(args);

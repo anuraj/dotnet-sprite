@@ -2,12 +2,12 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <PackageId>dotnet-sprite</PackageId>
-    <Title>dotnet-sprite</Title>
+    <PackageId>css-sprite</PackageId>
+    <Title>css-sprite</Title>
     <Authors>anuraj</Authors>
     <Company>dotnetthoughts.net</Company>
     <Description>A tool to generate a CSS sprite from a directory of images.</Description>
@@ -17,7 +17,7 @@
     <RepositoryUrl>https://github.com/anuraj/dotnet-sprite</RepositoryUrl>
 	  <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackAsTool>true</PackAsTool>
-    <ToolCommandName>sprite</ToolCommandName>
+    <ToolCommandName>css-sprite</ToolCommandName>
   </PropertyGroup>
   <ItemGroup>
     <None Include="..\Src\assets\icon.png">
