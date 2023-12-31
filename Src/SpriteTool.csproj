@@ -16,6 +16,8 @@
     <PackageVersion Condition="'$(BUILD_VERSION)' == ''">1.0.0</PackageVersion>
     <RepositoryUrl>https://github.com/anuraj/dotnet-sprite</RepositoryUrl>
 	  <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackAsTool>true</PackAsTool>
+    <ToolCommandName>sprite</ToolCommandName>
   </PropertyGroup>
   <ItemGroup>
     <None Include="..\Src\assets\icon.png">

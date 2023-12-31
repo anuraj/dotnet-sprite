@@ -1,5 +1,4 @@
 ﻿using System.CommandLine;
-using Microsoft.Extensions.Logging;
 using SkiaSharp;
 
 var outputOption = new Option<string>(
