@@ -4,7 +4,7 @@ A utility designed to produce a CSS sprite from a folder of images. An image spr
 
 Learn more about [Implementing image sprites in CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Images/Implementing_image_sprites_in_CSS)
 
-[![Build Status][ci-badge]][ci] ![NuGet][nuget-badge] ![NuGet Downloads][nuget-download-badge]
+[![Build Status][ci-badge]][ci] [![NuGet][nuget-badge]][nuget] [![NuGet Downloads][nuget-download-badge]][nuget]
 
 [ci]: https://github.com/anuraj/dotnet-sprite/actions/workflows/main.yml/badge.svg
 [ci-badge]: https://github.com/anuraj/dotnet-sprite/actions/workflows/main.yml/badge.svg
